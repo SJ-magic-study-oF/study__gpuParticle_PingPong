@@ -119,7 +119,8 @@ void ofApp::update(){
 		updatePos.setUniform3f("u_emitterPos", emitterPos.x, emitterPos.y, emitterPos.z);
 		updatePos.setUniform3f("u_prevEmitterPos", prevEmitterPos.x, prevEmitterPos.y, prevEmitterPos.z);
 		
-		pingPong.src->draw(0, 0);
+		pingPong.src->draw(0, 0); // means : pingPong.src->getTextureReference(0).draw(0, 0);
+		// pingPong.src->getTextureReference(0).draw(0, 0);
 		
 		updatePos.end();
 	pingPong.dst->end();
